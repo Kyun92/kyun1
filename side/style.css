@@ -1,0 +1,286 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box; 
+}
+/*Main start*/
+#main .header .container{
+    background-image: url(img/main_back.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#main .header .container .title h1{
+    padding: 0;
+    margin: 0;
+    align-content: center;
+    color: #f8f8f8;
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    font-weight: 100;
+    margin-top: 200px;
+    padding-bottom: 50px;
+}
+#main .header .container .title .button{
+    border: 2px solid #f8f8f8;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    display: flex;
+}
+#main .header .container .title .button2{
+    border: 2px solid #f8f8f8;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background-color: #f8f8f8;
+}
+#main .header .container .tip {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    border: 2px solid #f8f8f8;
+    border-radius: 100%;
+}
+
+#main .header .container .tip p{
+    padding: 0;
+    margin: 0;
+    align-content: center;
+    color: #f8f8f8;
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+}
+/*main end*/
+#tip {
+    background-color: #191919;
+    color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+#tip a{
+    text-decoration: none;
+    color: #f8f8f8;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+#tip .header .container {
+    padding: 10px;
+    border-bottom: 1px solid #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+}
+#tip .header .container .back .back_icon {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+#tip .header .container .logo p{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+/*
+#tip .header .container .back{
+    border: 1px solid red;
+}
+#tip .header .container .logo{
+    border: 1px solid red;
+}
+
+#tip .header .container .photo{
+    border: 1px solid red;
+}
+*/
+#tip .header .container .button{
+    border: 2px solid #f8f8f8;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    display: flex;
+}
+#tip .header .container .button2{
+    border: 2px solid #f8f8f8;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    background-color: #f8f8f8;
+}
+#tip .tip {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 240px;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0,0,0,);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#tip .tip img{
+    width: 100vw;
+}
+#tip .tip1 {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(img/tip_1.jpeg);
+}
+#tip .tip2 {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(img/tip_2.jpeg);
+}
+#tip .tip3 {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(img/tip_3.jpeg);
+}
+#tip .tip4 {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(img/tip_4.jpeg);
+}
+
+#tip .main_text {
+    font-family: "AppleMyungjo" sans-serif;
+    font-size: 0.8rem;
+}
+#tip .text {
+    height: 150px;
+    width: 80vw;
+    margin: auto;
+    position: relative;
+}
+#tip .text{
+    display: none;
+}
+#tip .fa-angle-down{
+    font-size: 25px;
+    position: absolute;
+    bottom: 15%;
+}
+#tip .fa-angle-up {
+    position: absolute;
+    bottom: 15%;
+    font-size: 25px;
+    left: 48%;
+    
+}
+#tip .text p {
+    font-family: "AppleMyungjo" sans-serif;
+    font-weight: ;
+    font-size: 0.8rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+/*Tip end*/
+
+/*pic start*/
+#pic {
+    background-color: #191919;
+    color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+#pic a{
+    text-decoration: none;
+    color: #f8f8f8;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+#pic .header .container {
+    padding: 10px;
+    border-bottom: 1px solid #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+}
+#pic .header .container .back .back_icon {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+#pic .header .container .logo p{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#pic {
+    height: 100%;
+}
+
+#pic .content .container {
+    width: 80vw;
+    height: 100%;
+    margin: auto;
+    padding-top: 20px;
+/*    border: 1px solid red;*/
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+#pic .content .container .img{
+/*	border: 1px solid #f8f8f8;*/
+    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+#pic .content .container .pic_img1 {
+    background-image: url(img/ex_1.jpeg);
+}
+#pic .content .container .pic_img2 {
+    background-image: url(img/ex_2.jpeg);
+}
+#pic .content .container .pic_img3 {
+    background-image: url(img/ex_3.jpeg);
+}
+#pic .content .container .pic_img4 {
+    background-image: url(img/ex_4.jpeg);
+}
+#pic .pop {
+    position: absolute;
+/*    border: 1px solid red;*/
+    width: 80vw;
+    height: 85vh;
+    background-color: #191919;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+/*    line-height: 4;*/
+    display: none;
+}
+
+#pic .pop_img{
+    width: 65vw;
+    margin: 20px auto;
+    margin-top: 20px;
+/*    border: 1px solid green;*/
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+}
+
+#pic .container .button{
+    border: 2px solid #f8f8f8;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+}
+
+/*pic end*/
+

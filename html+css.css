@@ -1,0 +1,781 @@
+:root{
+    --main-color: #8a8a8a;
+    --accent-color: #BF6A7A;
+    --dark-main-color: #2B5566;
+    --text-bright-color: #F8F8F8;
+    --icon-color: #f8f8f8;
+    --icon-bk-color: #ddd;
+    --large-width: 1000px;
+}
+body {
+    font-family: 'Apple SD Gothic Neo', '맑은 고딕', sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    color:#f8f8f8;
+    padding: 0;
+}
+
+/*헤더 A 로고 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(255,255,255,0.2);
+}
+.headA{
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #f8f8f8;
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+    font-size: 24px;
+}
+/*해드B 메뉴*/
+.headB ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.headB a {
+    display: block;
+    padding: 15px;
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+}
+.headB a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+@media (min-width:768px){
+    header .container {
+	    display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1000px;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .headB ul {
+        display: flex;
+    }
+}
+/*헤드 C 토글버튼*/
+@media (max-width: 768px){
+/*    작은 화면 토글 버튼 활성화*/
+    header .container-small{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .headB {
+        display: none;
+    }
+    .headC {
+        margin-right: 10px;
+        padding: 0;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 28px;
+        opacity: 1;
+        cursor: pointer;
+        color: inherit;
+    }
+    .headC:hover {
+        opacity: 0.5;
+    }
+    
+}
+@media (min-width : 768px){
+    .headB {
+        display: block !important;
+    }
+    .headC {
+	    display: none;
+    }
+}
+/*콘텐츠 A : 히어로 이미지*/
+.conA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 450px;
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(img/main.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #f8f8f8;
+    color: var(--text-bright-color);
+    
+}
+.conA h1{
+    margin-top: 0;
+    margin-bottom: 1px;
+    font-size: 15vw;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    font-family: 'Lobster', cursive;
+}
+.conA p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-family: 'Lobster', cursive;
+}
+
+
+
+
+@media (min-width: 768px) {  /*브레이크 포인트 : 769px*/
+    .conA h1{
+        font-size: 115px;
+    }
+    .conA p{
+        font-size: 24px;
+    }
+}
+
+/* video start */
+.video{
+    margin-top: 10px;
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(img/video_back.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 450px;
+}
+.video .container {
+    display: flex;
+    max-width: 1000px;
+    max-width: var(--large-width);
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+        
+}
+#youtube {
+    width: 100%;
+    height: 500px;
+}
+@media (min-width: 768px){
+    .video .container {
+	    display: flex;
+        max-width: 1000px;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+        height: 100vh;
+    }
+    #youtube {
+        width: 100%;
+        height: 700px;
+    }
+}
+/* video end */
+/*intro start*/
+.slide{
+    height: 100%;
+}
+.mySlides {display:none}
+
+/* Slideshow container */
+
+.slideshow-container {
+  max-width: 100vw;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text1 {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: none;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.mockup_1{
+
+    height: 90vh;
+    background-image: url(img/mockup_1.png);
+    background-size: cover;
+    background-position: center;
+}
+.mockup_2{
+    height: 90vh;
+    background-image: url(img/mockup_4.png);
+    background-size: cover;
+    background-position: center;
+}
+.mockup_3{
+
+    height: 90vh;
+    background-image: url(img/mockup_3.png);
+    background-size: cover;
+    background-position: center;
+}
+/* On smaller screens, decrease text size */
+@media (max-width : 768px) {
+  .text1 {font-size: 11px}
+    .mockup{
+        height: 50vh;
+    }
+}
+
+/*intro end*/
+
+/*콘텐츠 : C */
+.conC {
+    background-color: #f8f8f8;
+    color: #111;
+}
+.conC .text {
+    padding: 20px;
+    color: #111;
+}
+.conC h1{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+.conC p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    
+    text-align: center;
+    
+}
+.conC h3{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.conC .photo {
+    min-height: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+	display: flex;
+/*    border: 1px solid red;*/
+    align-items: center;
+    justify-content: center;
+}
+.conC .photo img{
+    height: 100%;
+    width: 65%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media (min-width: 768px){
+    .conC .container {
+        display: flex;
+        max-width: 1000px;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+        height: 80vh;
+    }
+    .conC .photo {
+	    flex: 1;
+    }
+    .conC .text {
+        flex: 1;
+        padding: 50px;
+    }
+
+}
+/*콘텐츠 : D */
+.conD {
+    background-color: #111;
+    color: #f8f8f8;
+
+}
+.conD-ani{
+    opacity: 1;
+}
+.conD .text {
+    padding: 20px;
+    
+}
+.conD h1{
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-size: 30px;
+    text-align: center;
+}
+.conD p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 1;
+    text-align: center;
+    
+}
+.conD h3{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.conD .photo {
+    min-height: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+	display: flex;
+/*    border: 1px solid red;*/
+    align-items: center;
+    justify-content: center;
+}
+.conD .photo img{
+    height: 100%;
+    width: 65%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media (min-width: 768px){
+    .conD .container {
+        display: flex;
+        max-width: 1000px;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+        height: 80vh;
+    }
+    .conD .photo {
+	    flex: 1;
+    }
+    .conD .text {
+        flex: 1;
+        padding: 50px;
+    }
+
+}
+/*ex start*/
+.ex{
+    height: 100%;
+    background-color: #f8f8f8;
+    padding-bottom: 30px;
+    color: #111;
+}
+.ex h1{
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 30px;
+    margin-top: 0;
+    margin: auto;
+}
+.container-grid {
+	max-width: 1000px;
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.wrap {
+    height: 90vh;
+    width: 100%;
+    padding: 0;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.box1{
+    background-image: url(img/ex3.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 40%;
+    height: 25%;
+    top: 0%;
+    left: 0;
+    position: absolute;
+    opacity: 1;
+    transition: all 0.3s;
+}
+.box2{
+    background-image: url(img/ex4.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 40%;
+    height: 50%;
+    left: 40%;
+    position: absolute;
+    opacity: 1;
+    transition: all 0.3s;
+}
+.box3{
+    background-image: url(img/ex7.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 80%;
+    width: 20%;
+    height: 25%;
+    opacity: 1;
+    transition: all 0.3s;
+}
+.box4 {
+   background-image: url(img/ex2.jpeg);
+    background-size: cover;
+    background-position: center;
+   top: 25%;
+    left: 80%;
+    width: 20%;
+    height: 25%;
+    position: absolute; 
+    opacity: 1;
+    transition: all 0.3s;
+}
+.box5 {
+    background-image: url(img/ex8.jpeg);
+    background-size: cover;
+    background-position: center;
+    top:25%;
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    opacity: 1;
+    transition: all 0.3s;
+    
+}
+.box6 {
+    background-image: url(img/ex1.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:50%;
+    left: 40%;
+    width: 20%;
+    height: 25%;
+    opacity: 1;
+    transition: all 0.3s;
+    
+}
+.box7 {
+    background-image: url(img/ex5.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    width: 40%;
+    height: 50%;
+    opacity: 1;
+    transition: all 0.3s;
+}
+.box8 {
+    background-image: url(img/ex10.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:75%;
+    left: 0;
+    width: 60%;
+    height: 25%;
+    opacity: 1;
+    transition: all 0.3s;
+}
+.box:hover {
+    opacity: 0.5;
+}
+
+@media (max-width: 700px){
+    .container-grid {
+        height: 100%;
+        width: 100vw;
+    }
+   .wrap{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+       height: 100%;
+    }
+    .box1{
+        position: static;
+        width: 100%;
+        flex: 1 100%;
+        height: 300px;
+
+    }
+    .box2{
+        position: static;
+        width: 100%;
+        flex: 1 100%;
+        height: 300px;
+    }
+    .box3{
+        position: static;
+        width: 50%;
+        flex: 1 50%;
+        height: 150px;
+        
+    }
+    .box4{
+        position: static;
+        flex: 1 50%;
+        width: 50%;
+        height: 150px;
+
+    }
+    .box5{
+        position: static;
+        width: 100%;
+        flex: 1 100%;
+        height: 300px;
+
+
+    }
+    .box6{
+        position: static;
+        width: 50%;
+        flex: 1 50%;
+        height: 150px;
+
+    }
+    .box7{
+        position: static;
+        width: 50%;
+        flex: 1 50%;
+        height: 150px;
+
+    }
+    .box8{
+        position: static;
+        width: 100%;
+        flex: 1 100%;
+        height: 300px;
+    }
+    
+        }
+/*ex end*/
+.title{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+    background-color: #f8f8f8;
+    color: #111;
+}
+/*member start*/
+.kyun{
+    height: 50vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #111;
+}
+.title{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 0;
+    padding-top: 20px;
+}
+.kyun .container{
+    max-width: 1000px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.kyun .kyun_img{
+    flex: 1 50%;
+    background-image: url(img/kyun.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.kyun_text {
+	flex: 1 50%;
+/*    padding: 50px;*/
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kyun_text h1{
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-size: 30px;
+}
+.kyun_text h2{
+    margin: 0;
+    padding: 0;
+    line-height: 1.2em;
+    font-size: 2rem;
+}
+.kyun_text ul{
+    display: inline;
+}
+.kyun_text li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.tae{
+    height: 50vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #111;
+}
+.tae .container{
+    max-width: 1000px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.tae .tae_img{
+    flex: 1 50%;
+    background-image: url(img/tae.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.tae_text {
+	flex: 1 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tae_text li{
+    list-style: none;
+    text-align: center;
+    margin-right: 50px;
+}
+/*member end*/
+.title2{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 50px;
+    margin-bottom: 0;
+    background-color: #f8f8f8;
+    color: #111;
+}
+/*tool start*/
+.tool{
+    height: 50vh;
+    background-color: #f8f8f8;
+}
+.tool .container {
+	max-width: 1000px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log{
+    height: 150px;
+    width: 150px;
+}
+.logo1{
+    background-image: url(img/HTML.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.2s;
+
+}
+.logo2{
+    background-image: url(img/css3.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.2s;
+
+}
+.logo3{
+    background-image: url(img/Javascript.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.2s;
+}
+.logo4{
+    background-image: url(img/Android.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s;
+}
+.logo5{
+    background-image: url(img/Phonegap.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s;
+}
+.logo1:hover{
+    width: 300px;
+    height: 300px;
+}
+.logo2:hover{
+    width: 300px;
+    height: 300px;
+}
+.logo3:hover{
+    width: 300px;
+    height: 300px;
+}
+.logo4:hover{
+    width: 300px;
+    height: 300px;
+}
+.logo5:hover{
+    width: 300px;
+    height: 300px;
+}
+/*tool end*/
+.ani_0, .ani_1, .ani_2, .ani_3, .ani_4, .ani_5{
+    opacity: 0;
+    transition: all 200ms ease-in;
+}
+.ani {
+    opacity: 1;
+}

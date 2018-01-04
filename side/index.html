@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <script src="https://use.fontawesome.com/06b5b1a7fe.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>
+<!--
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+-->
+    
+    <link rel="stylesheet" href="style.css">
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="myjs.js"></script>
+
+    <title>Yascam</title>
+</head>
+<body>
+<!--   Main page Start-->
+    <div data-role="page" id="main">
+        <div class="header">
+            <div class="container">
+                <div class="title">
+                    <h1>YASCAM</h1>
+                    <a href="#pic">
+                       <div class="button">
+                        <div class="button2"></div>
+                    </div>
+                    </a>
+                </div>
+                <a href="#tip">
+                   <div class="tip">
+                        <p>tip</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+<!--Main page end-->
+
+<!--Content : tip  Start-->
+    <div data-role="page" id="tip">
+        <div class="header">
+            <div class="container">
+               <div class="back">
+                <a href="#main"><i class="fa fa-angle-left back_icon" aria-hidden="true"></i></a>
+                </div>
+                    <div class="logo">
+                        <a href="#main"><p>YASCAM</p></a>
+                    </div>
+                    <div class="photo">
+                    <a href="#pic">
+                       <div class="button">
+                        <div class="button2"></div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="tip1 tip"> 
+                <p class="main_text main_text1">발 끝을 화면 하단에 맞추세요</p>
+                <i class="fa fa-angle-down down1" aria-hidden="true"></i>
+            </div>
+            <nav class="tip_text1 text">
+                <p>발 끝을 화면 하단에 맞추세요</p>
+                <p>발 밑에 여백이 많으면 상대방의 다리 길이를 잃을 수 있다. 화면 하단에 상대방의 발끝을 두고 찍자. 상대방의 비율이 훨씬 좋아질 것이다.</p>
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </nav>
+            <div class="tip2 tip">
+                <p class="main_text main_text2">수평은 꼭 일직선</p>
+                <i class="fa fa-angle-down down2" aria-hidden="true"></i>
+            </div>
+            <div class="tip_text2 text">
+                <p>수평은 꼭 일직선</p>
+                <p>상대방이 아무리 예쁘게 나와도 배경 수평이 기울었다면 불안정한 느낌에 사진을 망칠 수 있다.
+                    수평을 맞추는 기본만 지켜도 ‘인생샷’을 거머쥘 수 있다. </p>
+                    <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </div>
+            <div class="tip3 tip">
+                <p class="main_text main_text3">한쪽 공간은 넓게</p>
+                <i class="fa fa-angle-down down3" aria-hidden="true"></i>
+            </div>
+            <div class="tip_text3 text">
+                <p>한쪽 공간은 넓게</p>
+                <p>아름다운 자연환경을 배경으로 상대방에게 분위기 있는 사진을 선사하고 싶다면 상대방을 화면의 한 쪽으로 치우치게 두자.
+                상대방도 살리고 배경도 살리는 일석이조의 효과를 볼 것이다,</p>
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </div>
+            <div class="tip4 tip">
+              <p class="main_text main_text4">얼굴 사진은 가운데로</p>
+                <i class="fa fa-angle-down down4" aria-hidden="true"></i>
+            </div>
+            <div class="tip_text4 text">
+                <p>얼굴 사진은 가운데로</p>
+                <p>상대방의 얼굴을 담기 위해선 피사체를 중앙에 두자. 훨씬 더 선명하고 또렷한 사진을 건질 수 있을 것이다.</p>
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+<!--Content : Tip End-->
+<!--Pic Start -->
+    <div data-role="page" id="pic">
+        <div class="header">
+            <div class="container">
+               <div class="back">
+                <a href="#main"><i class="fa fa-angle-left back_icon" aria-hidden="true"></i></a>
+                </div>
+                    <div class="logo">
+                        <a href="#main"><p>YASCAM</p></a>
+                    </div>
+                    <div class="photo">
+                  
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="pic_img1 img"></div>
+                <div class="pic_img2 img"></div>
+                <div class="pic_img3 img"></div>
+                <div class="pic_img4 img"></div>
+                <div class="pop">
+                    <div class="pop_img">
+                    </div>
+                    <div class="photo">
+                    <a href="#">
+                       <div class="button" id="exe">
+                        <p>Yas!</p>
+                    </div>
+                    </a>
+                </div>
+                    
+                </div>
+<!--
+                <div class="pic_img5 img"></div>
+                <div class="pic_img6 img"></div>
+-->
+            </div>
+        </div>
+        </div>
+</body>
+</html>
